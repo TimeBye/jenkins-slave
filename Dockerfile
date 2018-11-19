@@ -10,6 +10,7 @@ RUN apk --no-cache add \
         tzdata \
         git \
         docker \
+        subversion \
     && sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
     && mkdir -p /var/logs/supervisor /var/run/supervisor \
     && rm -rf /var/cache/apk/* /tmp/* \
